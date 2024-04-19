@@ -1,0 +1,82 @@
+.Filmes{
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid; 
+    border-radius: 40px;
+}
+
+#pp{
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+p{
+    font-family: "Raleway", sans-serif;
+
+}
+
+.pagina{
+    display: flex;
+}
+
+.AlinharTexto{
+    position: absolute;
+    margin-top: -350px;
+    top: 50%;
+    
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+}
+
+.quebrar_lorem{
+    color: white;
+}
+
+.card{
+    width: 300px;
+    height: auto;
+    padding: 100px;
+}
+
+.cardTitle{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;   
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.cardImg img{
+    max-width: 100%;
+    object-fit: cover;
+    height: 450px;
+}
+
+.cardImg img:hover {
+    padding: 60px;
+    transform: scale(1.3); /* Aumenta o tamanho da imagem em 10% quando o mouse passa sobre ela */
+}
+
+.card img{
+    transition: 0.5s;
+}
+
+.cardList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.bold{
+    display: inline;
+    font-weight: bold;
+    font-size: 17px;
+}

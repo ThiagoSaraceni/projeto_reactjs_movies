@@ -1,0 +1,179 @@
+#Imdb{
+  background-color: black;
+  color: yellow;
+}
+
+.AlinharEsquerda{
+  color: white;
+
+  display: flex;
+  padding: 1rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 10px;
+  border-bottom: blue;
+}
+
+.formularie{
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(210, 233, 3, 0.842);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 3000px;
+  padding: 30px;
+
+}
+
+input, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #3e3e3e);
+  color: white;
+  font-family: Arial, sans-serif; 
+}
+
+#quebrarlorem{
+  word-break: break-all;
+}
+
+.search {
+  display: inline;
+  align-items: center;
+}
+
+.search input{
+  width: 200px;
+  height: auto;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.btnsbmt{
+  height: 45px;
+  width: 40px;
+
+}
+
+.btnsbmt:hover{
+  padding: 12px;
+  background: yellow;
+  cursor: pointer;
+}
+
+
+.formularie h1{
+  text-align: center;
+}
+
+
+
+.btnLogin{
+  padding: 20px;
+  font-weight: bold;
+}
+
+.btnLogin:hover{
+  cursor: pointer;
+}
+
+
+.cadastrarMovie{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(220, 255, 25, 0.842);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 3000px;
+  padding: 30px; 
+}
+
+.editarMovie{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(159, 166, 231, 0.842);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 3000px;
+  padding: 30px; 
+}
+
+.deletarMovie{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.842);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 3000px;
+  padding: 30px; 
+
+}
+
+.deletarMovie h1{
+  text-align: center;
+}
+
+.editarMovie h1{
+  text-align: center;
+}
+
+.cadastrarMovie h1{
+  text-align: center;
+}
+
+.editarUser{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(159, 166, 231, 0.842);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 3000px;
+  padding: 30px; 
+}
+
+.editarUser h1{
+  text-align: center;
+}
