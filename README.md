@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Sobre
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Estes documento README tem como objetivo fornecer as informações necessárias para realização do projeto de avaliação de candidatos.
 
-## Available Scripts
+# 🏗️ O que fazer?
 
-In the project directory, you can run:
+- Você deve realizar um fork deste repositório e, ao finalizar, enviar o link do seu repositório para a nossa equipe. Lembre-se, NÃO é necessário criar um Pull Request para isso, nós iremos avaliar e retornar por email o resultado do seu teste.
 
-### `npm start`
+# 🚨 Requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- A API deverá ser construída em **NodeJS**
+- Implementar autenticação e deverá seguir o padrão **JWT**, lembrando que o token a ser recebido deverá ser no formato **Bearer**
+- Caso seja desenvolvida em NodeJS o seu projeto terá que ser implementado em **ExpressJS**
+- Para a comunicação com o banco de dados utilize algum **ORM**/**ODM**
+- Bancos relacionais permitidos:
+  - MySQL
+  - MariaDB
+  - Postgre
+- Bancos não relacionais permitidos:
+  - MongoDB
+- Sua API deverá seguir os padrões Rest na construção das rotas e retornos
+- Sua API deverá conter a collection/variáveis do postman ou algum endpoint da documentação em openapi para a realização do teste
+- É desejável que o teste esteja na liguagem  **JavaScript** buscando avaliar o entendimento completo da linguagem e não de estruturas ou dependências que abstraiam determinadas definições não alheias ao ECMAScript. No entanto, testes realizados em **TypeScript** também serão aceitos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 🕵🏻‍♂️ Itens a serem avaliados
 
-### `npm test`
+- Estrutura do Projeto
+- Segurança da API, como autenticação, senhas salvas no banco, SQL Injection e outros
+- Boas práticas da Linguagem/Framework
+- Seu projeto  nadeverá seguir tudo o que foi exigido seção [O que desenvolver?](##--o-que-desenvolver)
+- Migrations para a criação das tabelas do banco relacional
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 🎁 Extra
 
-### `npm run build`
+Esses itens não são obrigatórios, porém desejados.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Testes unitários
+- Linter
+- Code Formater
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Obs.: Lembrando que o uso de algum linter ou code formater irá depender da linguagem que sua API for criada**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 🖥️ O que desenvolver?
 
-### `npm run eject`
+Você deverá criar uma API que o site [IMDb](https://www.imdb.com/) irá consultar para exibir seu conteúdo, sua API deve conter as seguintes features:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Admin
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Cadastro
+  - Edição
+  - Exclusão lógica (Desativação)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Usuário
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  - Cadastro
+  - Edição
+  - Exclusão lógica (Desativação)
 
-## Learn More
+- Filmes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - Cadastro (Somente um usuário administrador poderá realizar esse cadastro)
+  - Voto (A contagem dos votos será feita por usuário de 0-4 que indica quanto o usuário gostou do filme)
+  - Listagem (deverá ter filtro por diretor, nome, gênero e/ou atores)
+  - Detalhe do filme trazendo todas as informações sobre o filme, inclusive a média dos votos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Obs.: Apenas os usuários poderão votar nos filmes e a API deverá validar quem é o usuário que está acessando, ou seja, se é admin ou não**
 
-### Code Splitting
+# 🔗 Links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Documentação JWT https://jwt.io/
+- Frameworks NodeJS:
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  1. https://expressjs.com/pt-br/
