@@ -1,41 +1,4 @@
-.Filmes{
-    width: 100%;
-    padding: 20px;
-    margin: 10px;
-    border: 2px solid; 
-    border-radius: 40px;
-}
-
-#pp{
-    text-align: center;
-    display: block;
-    margin: auto;
-}
-
-p{
-    font-family: "Raleway", sans-serif;
-
-}
-
-.pagina{
-    display: flex;
-}
-
-.AlinharTexto{
-    position: absolute;
-    margin-top: -350px;
-    top: 50%;
-    
-    left: 50%;
-    
-    transform: translate(-50%, -50%);
-}
-
-.quebrar_lorem{
-    color: white;
-}
-
-.card{
+.card {
     width: 300px;
     height: auto;
     padding: 100px;
@@ -71,7 +34,7 @@ p{
 .cardList{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: center;
     width: 100%;

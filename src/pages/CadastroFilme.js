@@ -1,5 +1,7 @@
 import { useState } from "react";
 import urlApi from "../componentes/axios/Api";
+import Navbar from "../componentes/Navbar";
+import TelaUserAdmin from "./TelaUserAdmin";
 
 function CadastroFilme() {
     const [title, setTitle] = useState('');
@@ -8,6 +10,7 @@ function CadastroFilme() {
     const [diretor, setDiretor] = useState('');
     const [genero, setGenero] = useState('');
     const [urlfoto, setUrlfoto] = useState('');
+    const [duracao, setDuracao] = useState('0');
 
     const postFilmes = async (event) => {
         event.preventDefault();
@@ -17,7 +20,8 @@ function CadastroFilme() {
             descricao,
             diretor,
             genero,
-            url_foto: urlfoto
+            url_foto: urlfoto,
+            duracao
         };
         try {
             const response = await urlApi.post("/cadastrarfilme", filmes);
@@ -28,6 +32,7 @@ function CadastroFilme() {
             setDiretor('')
             setGenero('')
             setUrlfoto('')
+            setDuracao('0')
         } catch (error) {
             console.log("Erro! " + error.message);
         }
@@ -35,10 +40,13 @@ function CadastroFilme() {
 
     return (
         <div>
+            <TelaUserAdmin/>
             <form className="cadastrarMovie" onSubmit={postFilmes}>
                 <h1>Cadastrar filmes</h1>
                 <label htmlFor="title">Título</label>
                 <input type="text" placeholder="Título" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <label htmlFor="duracao">Duração:</label>
+                <input type="text" placeholder="Duração" value={duracao} onChange={(e) => setDuracao(e.target.value)} />
                 <label htmlFor="ano_filme">Ano do filme</label>
                 <input type="text" placeholder="Ano" value={anoFilme} onChange={(e) => setAnoFilme(e.target.value)} />
                 <label htmlFor="descricao">Descrição</label>

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import urlApi from "../componentes/axios/Api"
-
+import TelaUserAdmin from "./TelaUserAdmin"
 
 function EditarAdmin(){
     const[id, setID] = useState('')
@@ -34,6 +34,7 @@ function EditarAdmin(){
 
     return(
         <div>
+            <TelaUserAdmin/>
             <form className="editarUser" onSubmit={EditarUser}>
                 <h1>Editar cadastro de um usúario</h1>
                 <label htmlFor="id">ID</label>

@@ -43,6 +43,7 @@ function CadastrarUser(){
 
     return(
         <div>
+            <Layout/>
             <form className='formularie' onSubmit={validarPassword}>
                 <h1>CADASTRO DE USUARIO</h1>
                 <input type="text" placeholder="Nome de usuario" required value={name} onChange={(e) => setName(e.target.value)}></input>

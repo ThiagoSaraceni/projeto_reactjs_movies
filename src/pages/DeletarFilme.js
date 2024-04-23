@@ -1,6 +1,6 @@
 import { useState } from "react";
 import urlApi from "../componentes/axios/Api";
-
+import TelaUserAdmin from "./TelaUserAdmin";
 
 function DeletarFilme(){
     const [id, setID] = useState('');
@@ -26,6 +26,7 @@ function DeletarFilme(){
 
     return(
         <div>
+            <TelaUserAdmin/>
             <form className="deletarMovie" onSubmit={deleteMovies}>
                 <h1>Deletar um filme por ID</h1>
                 <label htmlFor="id">ID</label>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import urlApi from "../componentes/axios/Api";
-
+import TelaUserAdmin from "./TelaUserAdmin";
 
 function EditarCadastro(){
     const [id, setID] = useState('');
@@ -10,6 +10,7 @@ function EditarCadastro(){
     const [diretor, setDiretor] = useState('');
     const [genero, setGenero] = useState('');
     const [urlfoto, setUrlfoto] = useState('');
+    const [duracao, setDuracao] = useState('');
 
 
     const PutFilmes = async(event) =>{
@@ -21,7 +22,8 @@ function EditarCadastro(){
             descricao,
             diretor,
             genero,
-            url_foto: urlfoto
+            url_foto: urlfoto,
+            duracao
         }
         try {
             if(isNaN(id)){
@@ -36,6 +38,7 @@ function EditarCadastro(){
                 setDiretor('')
                 setGenero('')
                 setUrlfoto('')
+                setDuracao('')
             }
         } catch (error) {
             console.log(error)
@@ -46,6 +49,7 @@ function EditarCadastro(){
 
     return(
         <div>
+            <TelaUserAdmin/>
             <form className="editarMovie" onSubmit={PutFilmes}>
                 <h1>Editar um filme por ID</h1>
                 <label htmlFor="id">ID</label>
@@ -56,6 +60,8 @@ function EditarCadastro(){
                 <input type="text" placeholder="Ano" value={anoFilme} onChange={(e) =>{setAnoFilme(e.target.value)}}/>
                 <label htmlFor="descricao">Descrição</label>
                 <input type="text" placeholder="Descrição" value={descricao} onChange={(e) =>{setDescricao(e.target.value)}}/>
+                <label htmlFor="duração">Duração:</label>
+                <input type="text" placeholder="Duração" value={duracao} onChange={(e) => {setDuracao(e.target.value)}} />
                 <label htmlFor="diretor">Diretor</label>
                 <input type="text" placeholder="Diretor" value={diretor} onChange={(e) =>{setDiretor(e.target.value)}}/>
                 <label htmlFor="genero">Gênero</label>

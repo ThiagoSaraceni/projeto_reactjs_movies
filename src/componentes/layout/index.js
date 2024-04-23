@@ -7,9 +7,13 @@ import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import urlApi from "../axios/Api";
 import { useFetch } from "../../useCases";
+import NavbarUser from "../NavbarUsuario";
+import { Outlet } from "react-router-dom";
+import Home from "../../pages/Home";
 
 function Layout() {
   const [pesquisar, setPesquisar] = useState("");
+  const[showNavbar,  setShowNavbar] = useState(false)
 
   const { fetch, isLoading, data } = useFetch({
     endpoint: "filmes",
@@ -34,6 +38,7 @@ function Layout() {
   }
   function AbrirFormulario() {
     navigate("/FazerLogin");
+    
   }
 
 
@@ -41,11 +46,13 @@ function Layout() {
     <div className="AlinharEsquerda">
       <h1 id="Imdb">
         <RiMovie2Fill />
-        <Link className={styles.link} to="/">
+        <Link className={styles.link} to="/home">
           IMDB
         </Link>{" "}
       </h1>
-      <Navbar />
+      <NavbarUser/>
+      <Outlet />
+      {showNavbar && <Navbar />}
       <form className="search" on onSubmit={getByTitulo}>
         <input
           type="text"
